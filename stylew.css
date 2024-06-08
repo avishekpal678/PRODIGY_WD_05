@@ -1,0 +1,388 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0B60B0;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #0B60B0;
+    border-radius: 0px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+
+}
+
+header {
+    background-color: #40A2D8;
+    padding: 20px;
+    animation: fadeInHeader 1s ease-out;
+}
+
+@keyframes fadeInHeader {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header h1 {
+    margin: 0;
+    color: #F0EDCF;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    max-width: 500px;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+#city-input {
+    padding: 10px;
+    border: none;
+    border-radius: 30px ;
+    width: 70%;
+}
+
+#search-button {
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #40A2D8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    transition: transform 0.2s; 
+}
+
+#search-button:hover {
+    transform: scale(1.05); 
+}
+
+#search-button:active {
+    transform: scale(0.95); 
+}
+
+
+#search-button i {
+    font-size: 1.2em;
+}
+
+
+
+
+main {
+    padding: 20px;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-card {
+    background: radial-gradient(circle at 7.4% 45.1%, rgb(236, 206, 251) 0%, rgb(205, 237, 246) 45.1%, rgb(227, 251, 252) 78.4%, rgb(230, 247, 235) 90%);;
+    color: #000;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px ;
+    margin-bottom: 55px;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInCard 1s ease-out;
+   
+}
+
+@keyframes fadeInCard {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.weather-card h3 {
+    margin: 0;
+    font-size: 34px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px; 
+    line-height: 1.5; 
+    font-weight: 520; 
+}
+
+
+
+.weather-card p {
+    margin: 5px 0;
+   
+}
+
+.weather-card h1{
+font-size: 45px;
+font-weight:400;
+margin-top: -10px;
+}
+
+.weather-card h4{
+margin-top:-35px;
+ font-weight: 100
+}
+
+.weather-card h5{
+margin-top:-8px;
+ font-size:16px;
+  text-align: left;
+ font-weight: 150;
+
+}
+
+.weather-icon{
+width: 170px;
+margin-top: -80px;
+}
+
+
+.details{
+display:flex;
+align-items:center;
+justify-content: space-between;
+padding: 0 20px;
+margin-top: 30px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border: 1px solid #fff;
+    padding: 5px; 
+    margin: 10px; 
+    background-color: #fff; 
+    width: 40%; 
+    height: 10%; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 7px; 
+}
+
+
+.col img{
+width: 40px;
+margin-right:10px;
+}
+
+.humidity, .wind{
+font-size: 24px;
+margin-top:-6px;
+}
+
+
+.details1{
+display:flex;
+align-items:center;
+justify-content: space-between;
+padding: 0 20px;
+margin-top: 3px;
+}
+
+.col1 {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border: 1px solid #fff;
+    padding: 5px;
+    margin: 10px; 
+    background-color: #fff; 
+    width: 40%; 
+    height: 10%px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 7px; 
+}
+
+
+.col1 img{
+width: 40px;
+margin-right:10px;
+}
+
+
+.visibility, .pressure{
+font-size: 24px;
+margin-top:-6px;
+}
+
+
+.weather-icon1 {
+    max-width: 100px;
+    height: auto;
+    font-size: 30px;
+    align-item: center;
+}
+
+
+.forecast-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+.forecast-item {
+    margin: 10px;
+    flex: 1 0 auto; 
+    text-align: center;
+}
+
+.weather-icon1 {
+    width: 50px; 
+    height: auto;
+}
+
+
+.forecast-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.forecast-container::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+}
+
+.forecast-container::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+.forecast-item {
+   width: calc(60% / 5);
+    flex: 1 0 auto;
+    text-align: center;
+    animation: slideIn 0.5s ease-out;
+    }
+
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error {
+    color: red;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------css for small screen---------------------------------*/
+
+@media only screen and (max-width: 600px){
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0B60B0;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #0B60B0;
+    border-radius: 0px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: none;
+}
+
+.current-weather h2{
+font-size:18px;
+}
+
+
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border: 1px solid #fff;
+    padding: 5px; 
+    margin: 10px; 
+    background-color: #fff;
+    width: 50%;
+    height: 10%; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 7px;
+}
+
+.humidity, .wind{
+font-size: 16px;
+margin-top:-6px;
+}
+
+
+.visibility, .pressure{
+font-size: 16px;
+margin-top:-6px;
+}
+
+
+
+.col p, .col1 p{
+font-size:13px;
+}
+
+.forecast h2{
+margin-top:25px;
+}
+
+.forecast-item {
+        width: calc(100% / 5 - 5px);
+        margin: 10px;
+    }
+
+
+
